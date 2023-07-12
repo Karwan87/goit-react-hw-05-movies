@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import styles from './Home.module.css';
 
 const API_KEY = '4315a3747153818fe39eb54a50eb0402';
 
@@ -26,8 +27,8 @@ function Home() {
   }
 
   return (
-    <div>
-      <h2>Trending Movies Today</h2>
+    <div className={styles.ListContainer}>
+      <h2 className={styles.ListTitle}>Trending Movies Today</h2>
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>
