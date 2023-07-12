@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 // import Cast from '../Cast/Cast';
@@ -16,7 +16,6 @@ function MovieDetails() {
   const [loading, setLoading] = useState(true);
   const [showCast, setShowCast] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     axios
