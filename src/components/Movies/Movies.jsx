@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import styles from './Movies.module.css';
 
 const API_KEY = '4315a3747153818fe39eb54a50eb0402';
 
@@ -26,16 +27,29 @@ function Movies() {
   const handleMovieClick = movieId => {
     navigate(`/movies/${movieId}`);
   };
+  const handleKeyPress = event => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      handleSearch();
+    }
+  };
 
   return (
-    <div>
-      <h2>Search Movies</h2>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={e => setSearchQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+    <div className={styles.SearchContainer}>
+      <h2 className={styles.SearchTitle}>Search Movies</h2>
+      <div className={styles.FormContainer}>
+        <input
+          className={styles.SearchForm}
+          type="text"
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
+          onKeyPress={handleKeyPress}
+          placeholder="Search movies"
+        />
+        <button className={styles.SearchBtn} onClick={handleSearch}>
+          Search
+        </button>
+      </div>
       <ul>
         {searchResults.map(movie => (
           <li key={movie.id}>
@@ -51,6 +65,7 @@ function Movies() {
     </div>
   );
 }
+
 Movies.propTypes = {
   searchResults: PropTypes.arrayOf(
     PropTypes.shape({
