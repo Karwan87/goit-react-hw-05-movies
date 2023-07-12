@@ -13,7 +13,7 @@ export const App = () => {
     <Router>
       <div>
         <nav className={styles.SiteNav}>
-          <Link to="/">Home.</Link>
+          <Link to="/">Home</Link>
           <Link to="/movies">Movies</Link>
         </nav>
         <Suspense fallback={<div>Loading...</div>}>
