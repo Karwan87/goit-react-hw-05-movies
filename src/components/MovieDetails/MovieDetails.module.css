@@ -1,0 +1,79 @@
+.MovieContainer {
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 1px 5px 15px 15px rgba(0, 0, 0, 0.2);
+}
+.MovieDetail {
+  display: flex;
+  flex-direction: column;
+}
+.MoviePoster {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 20px;
+}
+img {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.MovieTitle {
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(255, 153, 0, 0.712);
+  color: #333;
+}
+.Extras {
+  margin: 20px;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+h5 {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 300;
+}
+.BtnContainer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 1px 5px 15px 15px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+}
+.CastBtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: underline;
+  color: blue;
+  font-size: 14px;
+  font-weight: 600;
+  height: 24px;
+  width: fit-content;
+  margin-left: 50px;
+}
+.CastBtn:hover {
+  cursor: pointer;
+}
+.ReviewsBtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: underline;
+  color: blue;
+  font-size: 14px;
+  font-weight: 600;
+  height: 24px;
+  width: fit-content;
+  margin-left: 50px;
+}
+.ReviewsBtn:hover {
+  cursor: pointer;
+}
