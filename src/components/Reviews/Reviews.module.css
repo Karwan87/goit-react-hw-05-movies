@@ -1,0 +1,18 @@
+.ContainerReviews {
+  width: 100%;
+}
+
+.ReviewsList {
+  list-style: none;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  width: 100%;
+}

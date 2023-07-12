@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import styles from './Reviews.module.css';
 
 const API_KEY = '4315a3747153818fe39eb54a50eb0402';
 
@@ -23,12 +24,11 @@ function Reviews({ movieId }) {
   }, [movieId]);
 
   return (
-    <div>
-      <h2>Movie Reviews</h2>
+    <div className={styles.ContainerReviews}>
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <ul>
+        <ul className={styles.ReviewsList}>
           {reviews.map(review => (
             <li key={review.id}>
               <h3>{review.author}</h3>
