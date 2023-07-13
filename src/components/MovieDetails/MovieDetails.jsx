@@ -94,7 +94,7 @@ function MovieDetails() {
       <div>
         {showCast && (
           <div>
-            <Suspense fallback={<div>Loading Cast...</div>}>
+            <Suspense fallback={<div>Loading Cast....</div>}>
               <Cast movieId={movieId} />
             </Suspense>
           </div>
@@ -102,7 +102,7 @@ function MovieDetails() {
 
         {showReviews && (
           <div>
-            <Suspense fallback={<div>Loading Reviews...</div>}>
+            <Suspense fallback={<div>Loading Reviews....</div>}>
               <Reviews movieId={movieId} />
             </Suspense>
           </div>
