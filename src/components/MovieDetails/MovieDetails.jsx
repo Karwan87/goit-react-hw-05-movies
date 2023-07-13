@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, Outlet } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 // import Cast from '../Cast/Cast';
@@ -75,12 +75,21 @@ function MovieDetails() {
       </div>
       <div className={styles.BtnContainer}>
         <h4 className={styles.Extras}>Additional information</h4>
-        <button className={styles.CastBtn} onClick={handleToggleCast}>
+
+        <Link
+          to={`/movies/${movieId}/cast`}
+          className={styles.CastBtn}
+          onClick={handleToggleCast}
+        >
           {showCast ? 'Cast' : 'Cast'}
-        </button>
-        <button className={styles.ReviewsBtn} onClick={handleToggleReviews}>
+        </Link>
+        <Link
+          to={`/movies/${movieId}/reviews`}
+          className={styles.ReviewsBtn}
+          onClick={handleToggleReviews}
+        >
           {showReviews ? 'Reviews' : 'Reviews'}
-        </button>
+        </Link>
       </div>
       <div>
         {showCast && (
